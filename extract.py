@@ -1,7 +1,7 @@
 
 import sys
 from ftplib import FTP
-#from urllib
+from urllib
 
 ftp = FTP('ftp.fec.gov')        # connect to host: ftp.fec.gov
 ftp.login()             # user = anonymous, pass = anonymous
@@ -43,19 +43,12 @@ for filename in d2files:
    ftp.retrbinary('RETR ' + filename, f.write)
    f.close()
 
-
-
-# Note: the header files don't work; the path is incorrect
 #Now get the header files
 
-#ftp.cwd('../../finance/disclosure/metadata')
-#ftp.retrlines('LIST')
-
-#head_files = ['cm_header_file.csv', 'cn_header_file.csv', 'pas2_header_file.csv','indiv_header_file.csv']
-#for filename in head_files:
-#   f = open(filename,'wb')
-#   ftp.retrbinary('RETR ' + filename, f.write)
-#   f.close()
+filenames = ['cm_header_file.csv', 'cn_header_file.csv', 'pas2_header_file.csv', 'indiv_header_file.csv']
+for name in filenames:
+    url = 'http://www.fec.com/finance/disclosure/metadata/' + name
+    urllib.urlretrieve(url, name)
 
 
 # 1. Committee Master
