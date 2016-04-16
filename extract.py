@@ -10,7 +10,7 @@ ftp.cwd('FEC')  # change directory to 'FEC'
 
 
 ftp.cwd('2016') # change directory to '2016'
-ftp.retrlines('LIST')   # list directory contents
+#ftp.retrlines('LIST')  
 
 # Download data files:
 
@@ -24,7 +24,7 @@ for filename in dfiles:
 
 #2014
 ftp.cwd('../2014') # change directory to 2014
-ftp.retrlines('LIST')  # list directory contents
+#ftp.retrlines('LIST')  
 
 d4files = ['cm14.zip', 'cn14.zip', 'pas214.zip', 'indiv14.zip']
 for filename in d4files:
@@ -35,7 +35,7 @@ for filename in d4files:
 #2012 files
 
 ftp.cwd('../2012')  # change directory to 2012
-ftp.retrlines('LIST')
+#ftp.retrlines('LIST')
 
 d2files = ['cm12.zip', 'cn12.zip', 'pas212.zip', 'indiv12.zip']
 for filename in d2files:
