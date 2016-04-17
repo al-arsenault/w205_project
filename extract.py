@@ -1,7 +1,7 @@
 
 import sys
 from ftplib import FTP
-from urllib
+import urllib
 
 ftp = FTP('ftp.fec.gov')        # connect to host: ftp.fec.gov
 ftp.login()             # user = anonymous, pass = anonymous
